@@ -1,0 +1,29 @@
+/* SPDX-License-Identifier: GPL-2.0-only */
+#undef TRACE_SYSTEM
+#define TRACE_SYSTEM gic_v3
+#define TRACE_INCLUDE_PATH trace/hooks
+#if !defined(_TRACE_HOOK_GIC_V3_H) || defined(TRACE_HEADER_MULTI_READ)
+#define _TRACE_HOOK_GIC_V3_H
+#include <linux/tracepoint.h>
+#include <trace/hooks/vendor_hooks.h>
+
+#ifdef __GENKSYMS__
+struct cpumask;
+struct irq_data;
+#else
+
+#include <linux/cpumask.h>
+
+#include <linux/irq.h>
+#endif 
+DECLARE_RESTRICTED_HOOK(android_rvh_gic_v3_set_affinity,
+	TP_PROTO(struct irq_data *d, const struct cpumask *mask_val,
+		 u64 *affinity, bool force, void __iomem *base),
+	TP_ARGS(d, mask_val, affinity, force, base),
+	1);
+
+
+
+#endif 
+
+#include <trace/define_trace.h>

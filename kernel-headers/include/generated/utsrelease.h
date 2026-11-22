@@ -1,0 +1,1 @@
+#define UTS_RELEASE "5.10.198-android12-9-00090-gf7559871b50a-ab11383503"

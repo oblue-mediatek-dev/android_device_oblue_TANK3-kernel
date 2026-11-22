@@ -1,0 +1,7 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+
+#ifdef TRACE_INCLUDE_PATH
+#define STORED_TRACE_INCLUDE_PATH TRACE_INCLUDE_PATH
+#undef TRACE_INCLUDE_PATH
+#endif
+

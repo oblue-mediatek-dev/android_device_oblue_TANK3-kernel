@@ -1,0 +1,14 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+
+
+#ifndef DT_BINDINGS_CLOCK_TEGRA234_CLOCK_H
+#define DT_BINDINGS_CLOCK_TEGRA234_CLOCK_H
+
+
+#define TEGRA234_CLK_FUSE			40
+
+#define TEGRA234_CLK_SDMMC4			123
+
+#define TEGRA234_CLK_UARTA			155
+
+#endif
